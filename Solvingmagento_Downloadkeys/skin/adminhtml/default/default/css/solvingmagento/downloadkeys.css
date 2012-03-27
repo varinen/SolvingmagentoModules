@@ -1,0 +1,26 @@
+.fieldset-left, .entry-edit-head
+{
+    float: left;
+    margin: 0 0 15px 15px;
+}
+
+.preview_table_download_keys td, th
+{
+    padding:5px;
+}
+
+.preview_table_download_keys  th
+{
+    background-color: #666666;
+    color:#fff;
+}
+
+.preview_table_download_keys td
+{
+    background-color: #eee;
+}
+
+.field-row
+{
+    font-weight:bold;
+}

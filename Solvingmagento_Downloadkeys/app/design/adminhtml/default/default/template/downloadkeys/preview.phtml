@@ -1,0 +1,31 @@
+<div>
+    <?php 
+        $product = $this->getProduct();
+        $previewData = $this->getPreviewData();
+        $keyData = $this->getKeyData();
+    ?>
+    <h3><?php echo Mage::helper('downloadkeys')->__('Preview the first 3 entries before upload');?></h3>
+    <p><?php echo Mage::helper('downloadkeys')->__(
+        'You are about to upload %d keys for product <b>%s</b>', 
+        sizeof($keyData[0]['key_entries']),
+        $product->getSku().' '.$product->getName()
+        );?></p>
+    <table class="preview_table_download_keys">
+        <tr>
+            <th><?php echo '#';?></th>
+            <?php for ($i = 0; $i < sizeof($previewData); $i++): ?>
+            <th><?php echo $previewData[$i]['caption'];?></th>
+            <?php endfor ?>
+        </tr>
+        <?php for ($i = 0; $i < sizeof($previewData[0]['key_entries']); $i++):?>
+        <tr>
+            <td><?php echo ($i+1);?></td>
+            <?php for ($j = 0; $j < sizeof($previewData); $j++): ?>
+            <td><?php echo $previewData[$j]['key_entries'][$i];?></td>
+            <?php endfor ?>
+        </tr>
+        <?php endfor ?>
+    </table>
+    
+    </pre>
+</div>

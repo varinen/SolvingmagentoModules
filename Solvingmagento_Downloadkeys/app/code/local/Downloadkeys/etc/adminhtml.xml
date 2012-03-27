@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <menu>
+        <catalog>
+            <children>
+                <downloadkeys translate="title" module="downloadkeys">
+                    <title>Download Keys</title>
+                    <children>
+                        <upload translate="title" module="downloadkeys">
+                            <title>Upload Keys</title>
+                            <action>slvgmgt_downloadkeys/upload</action>
+                        </upload>
+                        <keys translate="title" module="downloadkeys">
+                            <title>Manage Keys</title>
+                            <action>slvgmgt_downloadkeys/keys</action>
+                        </keys>
+                    </children>
+                    <sort_order>70</sort_order>
+                </downloadkeys>
+            </children>
+        </catalog>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <catalog>
+                        <children>
+                            <downloadkeys translate="title" module="downloadkeys">
+                                <title>Download Keys</title>
+                                <sort_order>510</sort_order>
+                                <children>
+                                    <types translate="title">
+                                        <title>Upload Keys</title>
+                                        <sort_order>0</sort_order>
+                                    </types>
+                                    <items translate="title">
+                                        <title>Manage Keys</title>
+                                        <sort_order>5</sort_order>
+                                    </items>
+                                </children>
+                            </downloadkeys>
+                        </children>
+                    </catalog>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

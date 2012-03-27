@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout version="0.1.0">
+    <solvingmagento_downloadkeys_upload_index>
+        <reference name="content">
+            <block type="solvingmagento_downloadkeys/upload_stepone" name="keyparts" />
+        </reference>
+    </solvingmagento_downloadkeys_upload_index>
+    <solvingmagento_downloadkeys_upload_data>
+        <reference name="head">
+            <action method="addItem"><type>skin_css</type><name>css/solvingmagento/downloadkeys.css</name></action>
+        </reference>
+        <reference name="content">
+            <block type="solvingmagento_downloadkeys/upload_steptwo" name="uploaddata" />
+        </reference>
+    </solvingmagento_downloadkeys_upload_data>
+    <solvingmagento_downloadkeys_upload_preview>
+        <reference name="head">
+            <action method="addItem"><type>skin_css</type><name>css/solvingmagento/downloadkeys.css</name></action>
+        </reference>
+        <reference name="content">
+            <block type="solvingmagento_downloadkeys/upload_stepthree" name="uploaddata" />
+        </reference>
+    </solvingmagento_downloadkeys_upload_preview>
+</layout>
